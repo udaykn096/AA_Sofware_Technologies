@@ -1,0 +1,133 @@
+What is Linux?
+Linux is a free and open-source operating system based on Unix. It acts as an interface between hardware and software, allowing programs to run, manage resources, and communicate with hardware devices.
+It is widely used in servers, embedded systems, desktops, mobile devices (like Android), and cloud infrastructure.
+
+
+
+________________________________________
+🧩 Components of Linux Operating System
+Linux is made up of several key components, each responsible for different aspects of system functionality:
+________________________________________
+1. Kernel (Core of Linux)
+•	Function: Manages system resources (CPU, memory, I/O, etc.).
+•	Acts as a bridge between hardware and software.
+•	Types:
+o	Monolithic Kernel: Everything runs in one space (Linux uses this).
+•	Manages:
+o	Process scheduling
+o	Memory management
+o	Device drivers
+o	System calls
+________________________________________
+2. System Libraries
+•	Special functions/programs used by applications to interact with the kernel.
+•	glibc is the most common system library in Linux.
+•	Examples:
+o	libc.so: C standard library
+o	libm.so: Math library
+________________________________________
+3. System Utilities
+•	Essential tools and commands used to manage the system.
+•	Examples:
+o	ls, cp, mv, ps, top, kill, chmod, df, du, etc.
+•	These allow users and admins to interact with the system effectively.
+________________________________________
+4. Shell (Command Line Interface)
+•	Acts as an interface between user and kernel.
+•	Users type commands, which the shell interprets and sends to the kernel.
+•	Types:
+o	Bash (Bourne Again SHell) – most common
+o	Zsh, Ksh, Tcsh, Fish, etc.
+________________________________________
+5. Hardware Layer
+•	Physical components: CPU, RAM, HDD/SSD, network cards, etc.
+•	Managed entirely by the kernel through device drivers.
+________________________________________
+6. User Applications
+•	Programs run by users: text editors, browsers, compilers, media players, etc.
+•	Examples:
+o	vim, firefox, gcc, gimp, docker, etc.
+________________________________________
+Optional: Init System
+•	Responsible for bootstrapping the user space and managing services/daemons.
+•	Examples:
+o	Systemd, SysVinit, Upstart
+________________________________________
+🔄 Linux Architecture Diagram (Textual)
+sql
+CopyEdit
++--------------------------+
+|   User Applications      |
++--------------------------+
+|   Shell / CLI / GUI      |
++--------------------------+
+|   System Utilities       |
++--------------------------+
+|   System Libraries       |
++--------------------------+
+|        Kernel            |
+| - Process Mgmt           |
+| - Memory Mgmt            |
+| - Device Drivers         |
+| - Filesystem Mgmt        |
+| - Network Stack          |
++--------------------------+
+|      Hardware Layer      |
++--------------------------+
+
+
+
+
+
+
+
+Linux Boot Process :
+
+The Linux boot process consists of several stages that culminate in a running system. Below are the key stages with a focus on the kernel and process handling:
+________________________________________
+🧱 1. BIOS/UEFI Stage
+•	BIOS (Basic Input/Output System) or UEFI initializes hardware.
+•	Loads the bootloader (like GRUB) from the MBR (Master Boot Record) or EFI partition.
+________________________________________
+🧹 2. Bootloader Stage (e.g., GRUB)
+•	GRUB locates and loads the Linux kernel (vmlinuz) and initial RAM disk (initrd or initramfs) into memory.
+•	Passes control to the kernel with parameters (e.g., root filesystem path).
+________________________________________
+🧠 3. Kernel Initialization
+Once the bootloader loads the kernel, here's what happens:
+a. Decompression and Setup
+•	vmlinuz is a compressed kernel image → it decompresses itself in memory.
+•	Kernel sets up protected mode, memory management, and hardware abstraction.
+b. Initramfs or Initrd Execution
+•	Temporary root filesystem loaded into RAM.
+•	Kernel mounts initramfs and executes /init inside it (a shell script or binary).
+•	Responsible for:
+o	Loading necessary drivers/modules.
+o	Mounting the actual root filesystem (e.g., /dev/sda2).
+________________________________________
+🚀 4. Switch to Real Root Filesystem
+•	Kernel executes a switch from initramfs to the real root filesystem.
+•	Unmounts initramfs, mounts real /.
+________________________________________
+🔁 5. Starting init Process (PID 1)
+•	The kernel executes the first user-space process: init.
+•	This is the parent of all user-space processes.
+Depending on the Linux distro, init could be:
+•	System V init (/sbin/init)
+•	Systemd (/lib/systemd/systemd)
+•	Upstart (older Ubuntu)
+________________________________________
+📋 6. Init/Systemd Process Responsibilities
+•	Mounts essential filesystems like /proc, /sys, /dev.
+•	Spawns services/daemons as defined in runlevels or systemd targets.
+•	Starts getty on terminals for user login.
+•	Starts networking, cron, dbus, etc.
+________________________________________
+⚙️ 7. Kernel Process Management
+•	Kernel always has several internal processes, usually kernel threads:
+o	kthreadd: Kernel thread manager.
+o	ksoftirqd: Handles soft IRQs.
+o	kworker: Manages background work queues.
+o	kswapd: Handles memory swapping.
+o	rcu_sched: Read-copy-update synchronization.
+•	You can see them in top, ps, or /proc.
