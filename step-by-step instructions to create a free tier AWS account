@@ -1,0 +1,38 @@
+✅ Step 1: Visit the AWS Website
+•	Go to: https://aws.amazon.com/free
+________________________________________
+✅ Step 2: Click on “Create a Free Account”
+•	You'll be redirected to the AWS account creation page.
+________________________________________
+✅ Step 3: Provide Email & Password
+•	Email Address – Enter a valid email ID.
+•	Password – Set a strong password.
+•	AWS Account Name – Enter a name (e.g., "ShanthakumarDevOps").
+________________________________________
+✅ Step 4: Choose Account Type
+•	Select Personal Account (for learning or practice).
+•	Enter your full name, phone number, country, and address.
+________________________________________
+✅ Step 5: Add Payment Information
+•	Add a valid credit or debit card (required for identity verification).
+o	AWS may deduct a refundable charge of ₹2 or $1 for validation.
+________________________________________
+✅ Step 6: Verify Your Identity
+•	Enter your mobile number.
+•	You will receive an OTP (One-Time Password).
+•	Enter the OTP to complete verification.
+________________________________________
+✅ Step 7: Choose a Support Plan
+•	Select the Basic Support - Free plan.
+________________________________________
+✅ Step 8: Sign in to the AWS Console
+•	Once setup is complete, sign in at https://console.aws.amazon.com/
+•	Use the root email and password you created earlier.
+________________________________________
+✅ Step 9: Start Using Free Tier Services
+You now have access to AWS free tier, which includes:
+•	750 hours/month of EC2 (t2.micro or t3.micro)
+•	5 GB S3 storage
+•	750 hours/month of RDS
+•	25 GB DynamoDB, and more.
+
