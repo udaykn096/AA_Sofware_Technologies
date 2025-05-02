@@ -1,0 +1,84 @@
+Types of Linux Commands
+Linux commands can be grouped based on their functionality:
+________________________________________
+1. 📁 File and Directory Commands
+Used for file creation, viewing, copying, moving, deleting, and permissions.
+Command		Description
+ls		List files and directories
+cd		Change directory
+pwd		Show current directory path
+touch		Create empty file
+mkdir		Create directory
+cp		Copy file or directory
+mv		Move or rename
+rm		Remove file or directory
+chmod		Change file permissions
+________________________________________
+2. 🧠 Process Management Commands
+Used to view, manage, or kill running processes.
+Command	Description
+ps	View running processes
+top	Dynamic real-time process view
+kill	Kill a process by PID
+killall	Kill processes by name
+nice	Launch with priority
+htop	Enhanced interactive process viewer
+________________________________________
+3. 👤 User Management Commands
+Manage users, groups, and permissions.
+Command	Description
+adduser	Add a new user
+passwd	Change user password
+whoami	Show current user
+su	Switch user
+sudo	Execute command as root
+id	Show user ID and group info
+groupadd	Create a new group
+________________________________________
+4. 🌐 Networking Commands
+Used for network configuration, monitoring, and troubleshooting.
+Command	Description
+ifconfig / ip	Show/assign IP addresses
+ping	Test connectivity
+netstat	Show network connections
+ss	Detailed network info
+curl	Transfer data from or to a server
+wget	Download files from the internet
+hostname	Display system hostname
+________________________________________
+5. 🛠️ System Information Commands
+Display system hardware and OS details.
+Command	Description
+uname -a	   Kernel and OS info
+df -h	 Disk space usage
+free -m	 Memory usage
+uptime	 System uptime
+who	Logged in users
+dmesg	Boot-time kernel messages
+________________________________________
+6. 📦 Package Management Commands
+Install, update, and remove software packages.
+Package Manager	Commands
+Debian/Ubuntu (apt)	apt install, apt update, apt remove
+Red Hat/CentOS (yum or dnf)	yum install, dnf update
+Arch Linux (pacman)	pacman -S, pacman -R
+________________________________________
+7. 🐚 Shell/Bash Commands
+Special built-in commands for scripting and shell features.
+Command	Description
+echo	Print text
+read	Read input
+export	Set environment variable
+alias	Create command shortcut
+history	Show command history
+________________________________________
+8. 🧪 Text Processing Commands
+Used to process and manipulate text data.
+Command	Description
+cat	View file content
+grep	Search text
+awk	Pattern scanning and processing
+sed	Stream editor (search & replace)
+cut	Extract fields
+sort	Sort lines
+uniq	Remove duplicate lines
